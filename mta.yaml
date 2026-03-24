@@ -1,0 +1,19 @@
+_schema-version: "3.1"
+ID: ui5-app
+version: 1.0.0
+
+modules:
+  - name: ui5-app
+    type: html5
+    path: .
+    build-parameters:
+      builder: custom
+      commands:
+        - ui5 build --all
+      build-result: dist
+resources:
+  - name: ui5-app-repo
+    type: com.sap.html5.application-content
+    parameters:
+      content-target: true
+      service-plan: app-host
